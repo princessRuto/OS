@@ -168,7 +168,7 @@ void deq()
 }
 
 /* Returns the front element of queue */
-int frontelement()
+u8 frontelement()
 {
     if ((front != NULL) && (rear != NULL))
         return(front->info);
