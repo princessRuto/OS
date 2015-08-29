@@ -67,7 +67,7 @@ void comp_init(void)
 
 }
 
-unsigned char x,y,z;
+u8 x,y,z;
 
 void funcionZ(void)
 {
@@ -94,16 +94,16 @@ void funcionX(void)
 
 struct node
 {
-    unsigned char info;
+    u8 info;
     struct node *ptr;
 }*front,*rear,*temp,*front1;
 
-unsigned char frontelement();
-void enq(unsigned char data);
+u8 frontelement();
+void enq(u8 data);
 void deq();
 void create();
 void queuesize();
-unsigned char count = 0;
+u8 count = 0;
 
 /* Create an empty queue */
 void create()
@@ -118,7 +118,7 @@ void queuesize()
 }
 
 /* Enqueing the queue */
-void enq(int data)
+void enq(u8 data)
 {
     if (rear == NULL)
     {
