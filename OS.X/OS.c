@@ -177,6 +177,27 @@ u8 frontelement()
 }
 /************************************************************************/
 
+/*Semaforo*/
+
+typedef void * sem_t;
+typedef struct {
+    u8 x; /*Valor del semaforo*/
+    sem_t * s;
+    task waiting [10] ;
+}sem_t;
+
+u8 sem_wait(sem_t * s){
+    s.x--;
+    if(s.x<0){
+        /*wait*/
+    }
+}
+
+u8 sem_post(sem_t * s){
+    s.x++;
+    /*drunk fix later*/
+    /*If there is more than 1 task waiting wake it*/
+}
 
 
 
